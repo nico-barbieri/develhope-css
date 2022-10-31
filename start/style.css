@@ -32,19 +32,21 @@ LAYOUT
 main {
     max-width: 75rem;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     gap: 2rem;
 }
 @media screen and (max-width: 768px) {
     main {
-        grid-template-columns: repeat(2, 1fr);
+        flex-direction: column;
     }
 }
-@media screen and (max-width: 375px) {
-    main {
-        grid-template-columns: repeat(1, 1fr);
+@media screen and (max-width: 365px) {
+    .post {
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -53,8 +55,8 @@ main {
 POST DESIGN
 =============*/
 .post {
-    width: var(--post-width);
-    height: calc(1.5 * var(--post-width));
+    max-width: var(--post-width);
+    max-height: calc(1.5 * var(--post-width));
 
     display: flex;
     flex-direction: column;
