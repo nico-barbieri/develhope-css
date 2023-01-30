@@ -1,0 +1,33 @@
+:root {
+    --background: #011212;
+    --main-color: #ff8800;
+    --ball-radius: 50px;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.ball {
+    width: calc(var(--ball-radius)*2);
+    height: calc(var(--ball-radius)*2);
+    background-color: var(--main-color);
+    border-radius: var(--ball-radius);
+}
+
+/*
+Lascerei in alternativa la proprietà "border-radius" in ".ball" al 50% e
+una custom property "--ball-size" in ":root".
+
+:root{
+    --ball-size: 100px;
+}
+
+.ball {
+    width: var(--ball-size);
+    height: var(--ball-size);
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+
+*/
